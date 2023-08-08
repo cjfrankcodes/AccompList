@@ -1,0 +1,20 @@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        const checkboxes = document.querySelectorAll('.form-check-input');
+    
+        checkboxes.forEach((checkbox, index) => {
+            checkbox.addEventListener('change', () => {
+                const listItem = checkbox.parentElement;
+                const textSpan = listItem.querySelector('span');
+                if (checkbox.checked) {
+                    textSpan.style.textDecoration = 'line-through';
+                    textSpan.style.color = 'gray';
+                } else {
+                    textSpan.style.textDecoration = 'none';
+                    textSpan.style.color = 'inherit';
+                }
+            });
+        });
+    </script>
+   </body>
+</html>
