@@ -26,6 +26,7 @@ app.post("/submit", (req,res) =>{
 
 app.post("/taskDelete", (req,res) => {
     const deletedItem = req.body.deletedTask
+    const deletedTask = taskList[deletedItem]
     taskList.splice(deletedItem, 1)
     res.render("index.ejs", {"list": taskList})
 })

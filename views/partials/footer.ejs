@@ -1,15 +1,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
         const checkboxes = document.querySelectorAll('.form-check-input');
-    
+
         checkboxes.forEach((checkbox, index) => {
             checkbox.addEventListener('change', () => {
                 const listItem = checkbox.parentElement;
                 const textSpan = listItem.querySelector('span');
                 if (checkbox.checked) {
+                    listItem.style.opacity = '50%';
                     textSpan.style.textDecoration = 'line-through';
                     textSpan.style.color = 'gray';
                 } else {
+                    listItem.style.opacity = '100%';
                     textSpan.style.textDecoration = 'none';
                     textSpan.style.color = 'inherit';
                 }
